@@ -6,7 +6,7 @@ const logger = require('koa-logger');
 const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 
-mongoose.connect('mongodb://localhost/store', {
+mongoose.connect('mongodb://chang:123456@localhost/store', {
   useMongoClient: true,
 });
 const db = mongoose.connection;
@@ -15,20 +15,21 @@ db.once('open', function() {
   console.log('Database connection');
 });
 
-// const index = require('./server/routes/index');
-// const users = require('./server/routes/users');
-// const api = require('./server/routes/api/index');
-// router.use('/', index.routes());
-// router.use('/users', users.routes());
-// router.use('/api/v1', api.routes());
-
 const app = new Koa();
 const router = new Router();
 
 app.use(bodyParser());
 app.use(logger());
 app.use(cors());
-// app.use(router.routes());
+
+// const index = require('./server/routes/index');
+// const users = require('./server/routes/users');
+const api = require('./server/routes/api/index');
+// router.use('/', index.routes());
+// router.use('/users', users.routes());
+router.use('/api/v1', api.routes());
+
+app.use(router.routes());
 
 app.on('error', (err, ctx) => {
   logger('Server error', err, ctx);
