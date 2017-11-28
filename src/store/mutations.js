@@ -46,16 +46,14 @@ export const productMutations = {
       if (p._id === payload._id) {
         payload = {
           ...payload,
-          manufacturer: state.manufacturer.filter(
-            x => x._id === payload.manufacturer,
-          )[0],
+          manufacturer: state.manufacturer.filter(x => x._id === payload.manufacturer)[0],
         };
         return payload;
       }
       return p;
     });
   },
-  [REMOVE_PRODUCT](state, payload) {
+  [REMOVE_PRODUCT](state) {
     state.showLoader = true;
   },
   [REMOVE_PRODUCT_SUCCESS](state, payload) {

@@ -1,0 +1,28 @@
+<template>
+  <div class="products">
+      <div class="container">
+         <product-item v-for="product in products" :product="product" :key="product._id"></product-item>    
+      </div>
+  </div>
+</template>
+<script>
+import ProductItem from './ProductItem';
+
+export default {
+  name: 'product-list',
+  created() {
+    if (this.products.lenght === 0) {
+      this.$store.dispatch('allProducts');
+    }
+  },
+  computed: {
+    products() {
+      return this.$store.getters.allProducts;
+    },
+  },
+  components: {
+    'product-item': ProductItem,
+  },
+};
+</script>
+
