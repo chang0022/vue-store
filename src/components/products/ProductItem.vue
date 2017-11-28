@@ -3,7 +3,10 @@
       <div class="product">
           <router-link :to="'/details/'+product._id" class="product-link">
             <div class="product__image">
-                <img :src="product.image" alt="" class="img-responsive" :alt="product.name">
+                <img 
+                    class="img-responsive"
+                    :src="product.image"  
+                    :alt="product.name" />
             </div>
             <div class="product__description">
                 <div class="product__info">
