@@ -6,7 +6,7 @@
   ></product-form>   
 </template>
 <script>
-import ProductForm from '@/components/products/ProductForm';
+import ProductForm from '@/components/product/ProductForm';
 
 export default {
   data() {

@@ -4,6 +4,7 @@ import VeeValidate from 'vee-validate';
 
 import Home from '@/pages/Home';
 import Cart from '@/pages/Cart';
+import Details from '@/pages/Details';
 
 // Admin components
 import Index from '@/pages/admin/Index';
@@ -48,9 +49,9 @@ export default new Router({
       component: Cart,
     },
     {
-      path:'/details/:id',
+      path: '/details/:id',
       name: 'Details',
-      component: Details
-    }
+      component: Details,
+    },
   ],
 });

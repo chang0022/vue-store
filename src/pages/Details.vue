@@ -9,12 +9,12 @@ import ProductDetails from '../components/product/ProductDetails';
 export default {
   created() {
     if (!this.product.name) {
-      this.$store.dispatch('productById', this.$route.params['id']);
+      this.$store.dispatch('productById', this.$route.params.id);
     }
   },
   computed: {
     product() {
-      return this.$store.getters.productById(this.$route.params['id']);
+      return this.$store.getters.productById(this.$route.params.id);
     },
   },
   components: {

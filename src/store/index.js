@@ -1,17 +1,15 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 
-
 import { productGetters, manufacturerGetters } from './getters';
 import { productMutations, cartMutations, manufacturerMutations } from './mutations';
 import { productActions, manufacturerActions } from './actions';
 
 Vue.use(Vuex);
 
-
 const productsData = [
   {
-    id: 1,
+    _id: 1,
     manId: 3,
     name: 'Samsung S7 Edge',
     price: 659,
@@ -24,7 +22,7 @@ const productsData = [
     },
   },
   {
-    id: 2,
+    _id: 2,
     manId: 1,
     name: 'iPhone 7',
     price: 769,
@@ -37,7 +35,7 @@ const productsData = [
     },
   },
   {
-    id: 3,
+    _id: 3,
     name: 'Xperia XZ',
     price: 649,
     image: 'http://www.brandsmartusa.com/images/product/large/20222515.jpg',
