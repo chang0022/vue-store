@@ -104,8 +104,8 @@ export default {
   computed: {
     selected: {
       get() {
-        if (!Object.keys(this.model).length === 0) {
-          return this.model.manufacturers._id;
+        if (Object.keys(this.model).length > 0) {
+          return this.model.manufacturer._id;
         }
         return '';
       },
