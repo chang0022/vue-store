@@ -4,7 +4,7 @@
   </div>
 </template>
 <script>
-import ProductDetails from '../components/product/ProductDetails';
+import ProductDetails from '@/components/product/ProductDetails';
 
 export default {
   created() {

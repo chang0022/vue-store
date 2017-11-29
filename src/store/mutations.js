@@ -13,6 +13,7 @@ import {
   ALL_PRODUCTS_SUCCESS,
   ALL_MANUFACTURERS,
   ALL_MANUFACTURERS_SUCCESS,
+  ERROR_MSG,
 } from './mutation-types';
 
 export const productMutations = {
@@ -61,6 +62,9 @@ export const productMutations = {
     const index = state.products.findIndex(p => p._id === payload);
     console.debug('index', index);
     state.products.splice(index, 1);
+  },
+  [ERROR_MSG](state, payload) {
+    console.log(payload);
   },
 };
 

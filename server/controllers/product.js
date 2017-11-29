@@ -25,7 +25,7 @@ const productController = {
       });
   },
   async create(ctx, next) {
-    const requestBody = ctx.body;
+    const requestBody = ctx.request.body;
     const newProduct = new Product(requestBody);
     await newProduct
       .save()

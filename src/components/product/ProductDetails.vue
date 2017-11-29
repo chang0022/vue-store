@@ -3,9 +3,9 @@
       <div class="container">
           <div class="row">
               <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 product-details__image">
-                  <img 
+                  <img
                       class="img-responsive"
-                      :src="product.image" 
+                      :src="product.image"
                       :alt="product.name" />
               </div>
               <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12 product-details__info">
