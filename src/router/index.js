@@ -1,6 +1,5 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import VeeValidate from 'vee-validate';
 
 import Home from '@/pages/Home';
 import Cart from '@/pages/Cart';
@@ -13,7 +12,6 @@ import Products from '@/pages/admin/Products';
 import Edit from '@/pages/admin/Edit';
 
 Vue.use(Router);
-Vue.use(VeeValidate);
 
 export default new Router({
   routes: [

@@ -46,7 +46,6 @@
                   :selected="manufacturer._id == (model.manufacturer && model.manufacturer._id)"
                   :key="manufacturer._id">{{manufacturer.name}}</option>
             </template>
-<!-- v-model="model.manufacturer" -->
         </select>
         <span
             class="small text-danger"
@@ -104,13 +103,13 @@ export default {
   computed: {
     selected: {
       get() {
-        if (Object.keys(this.model).length > 0) {
-          return this.model.manufacturer._id;
+        if (this.model.manufacturer) {
+          return this.model.manufacturer._id || this.model.manufacturer;
         }
         return '';
       },
       set(v) {
-        console.log(v);
+        this.model.manufacturer = v;
       },
     },
   },
@@ -138,9 +137,6 @@ export default {
           });
         });
     },
-    // selectChange(event) {
-    //   console.log(event.target.value);
-    // },
   },
 };
 </script>

@@ -19,11 +19,11 @@
         <div class="dot dotThree"></div>
       </div>
     </div>
+    <notifications/>
   </div>
 </template>
 
 <script>
-import toastr from 'toastr';
 import { ADD_PRODUCT_SUCCESS, UPDATE_PRODUCT_SUCCESS, REMOVE_PRODUCT_SUCCESS } from './store/mutation-types';
 
 export default {
@@ -38,13 +38,25 @@ export default {
       if (mutation.payload) {
         switch (mutation.type) {
           case ADD_PRODUCT_SUCCESS:
-            toastr.success('Product created.', 'Success!');
+            this.$notify({
+              title: 'Success!',
+              message: 'Product created.',
+              type: 'success',
+            });
             break;
           case UPDATE_PRODUCT_SUCCESS:
-            toastr.success('Product updated.', 'Success!');
+            this.$notify({
+              title: 'Success!',
+              message: 'Product updated.',
+              type: 'success',
+            });
             break;
           case REMOVE_PRODUCT_SUCCESS:
-            toastr.success('Product deleted.', 'Deleted!');
+            this.$notify({
+              title: 'Success!',
+              message: 'Product deleted.',
+              type: 'success',
+            });
             break;
           default:
         }

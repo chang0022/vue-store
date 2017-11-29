@@ -1,7 +1,7 @@
 <template>
   <div class="products">
       <div class="container">
-         <product-item v-for="product in products" :product="product" :key="product._id"></product-item>    
+         <product-item v-for="product in products" :product="product" :key="product._id"></product-item>
       </div>
   </div>
 </template>
@@ -11,7 +11,7 @@ import ProductItem from './ProductItem';
 export default {
   name: 'product-list',
   created() {
-    if (this.products.lenght === 0) {
+    if (this.products.length === 0) {
       this.$store.dispatch('allProducts');
     }
   },
