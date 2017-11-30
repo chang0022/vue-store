@@ -1,10 +1,10 @@
 <template>
   <div>
-        <button v-if="isAdding" class="button" @click="addToCart">
+        <button v-if="isAdding" class="btn btn-primary btn-sm" @click="addToCart">
             <i class="fa fa-cart-plus"></i>
             添加
         </button>
-        <button v-else class="button button-danger" @click="removeFromCart(product._id)">
+        <button v-else class="btn btn-danger btn-sm" @click="removeFromCart(product._id)">
             <i class="fa fa-trash"></i>
             移除
         </button>

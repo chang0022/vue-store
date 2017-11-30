@@ -1,19 +1,19 @@
 <template>
   <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-      <div class="product">
+      <div class="card">
           <router-link :to="'/details/'+product._id" class="product-link">
             <div class="product__image">
-                <img 
-                    class="img-responsive"
-                    :src="product.image"  
+                <img
+                    class="img-fluid"
+                    :src="product.image"
                     :alt="product.name" />
             </div>
-            <div class="product__description">
+            <div class="card-body">
                 <div class="product__info">
-                    <small>{{product.manufacturer.name}}</small>
-                    <h4>{{product.name}}</h4>
+                    <small class="card-text">{{product.manufacturer.name}}</small>
+                    <h4 class="card-title">{{product.name}}</h4>
                 </div>
-                <div class="product__price-cart">
+                <div class="card-text">
                     ￥{{product.price}}
                 </div>
             </div>
@@ -35,3 +35,8 @@ export default {
   },
 };
 </script>
+<style scoped>
+.card-title {
+  font-size: 14px;
+}
+</style>

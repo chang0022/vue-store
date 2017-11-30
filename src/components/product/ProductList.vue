@@ -1,7 +1,9 @@
 <template>
   <div class="products">
       <div class="container">
-         <product-item v-for="product in products" :product="product" :key="product._id"></product-item>
+        <div class="row">
+          <product-item v-for="product in products" :product="product" :key="product._id"></product-item>
+        </div>
       </div>
   </div>
 </template>

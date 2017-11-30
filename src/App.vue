@@ -1,14 +1,24 @@
 <template>
   <div id="app">
-    <nav>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
-        <ul class="nav__left">
-          <li><router-link to="/"><i class="fa fa-home"></i> Home</router-link></li>
-          <li><router-link to="/admin"><i class="fa fa-user"></i> Admin</router-link></li>
-        </ul>
-        <ul class="nav__right">
-          <li><router-link to="/cart"><i class="fa fa-shopping-cart"></i> Cart ({{cartItemsCount}})</router-link></li>
-        </ul>
+        <router-link to="/" class="navbar-brand">Stock</router-link>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#J_navbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="J_navbar">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <router-link to="/" class="nav-link"><i class="fa fa-home"></i> Home</router-link>
+            </li>
+            <li class="nav-item">
+              <router-link to="/admin" class="nav-link"><i class="fa fa-user"></i> Admin</router-link>
+            </li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item"><router-link to="/cart" class="nav-link"><i class="fa fa-shopping-cart"></i> Cart ({{cartItemsCount}})</router-link></li>
+          </ul>
+        </div>
       </div>
     </nav>
     <router-view/>

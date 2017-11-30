@@ -1,13 +1,13 @@
 <template>
   <div>
     <div v-if="cart.length > 0">
-      <div class="title">
+      <div class="text-center">
         <h1><i class="fa fa-superpowers"></i> Your Cart</h1>
       </div>
       <product-details v-for="product in cart" :product="product" :key="product._id"></product-details>
     </div>
     <div v-else>
-      <div class="title">
+      <div class="text-center">
         <h1><i class="fa fa-superpowers"></i> Your Cart is Empty</h1>
       </div>
     </div>

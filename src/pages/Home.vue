@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="title">
+    <div class="text-center">
       <h1><i class="fa fa-braille"></i> In Stock</h1>
     </div>
     <product-list/>
