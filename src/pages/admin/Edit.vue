@@ -1,6 +1,6 @@
 <template>
   <product-form
-    @save-product="updateProdcut"
+    @save-product="updateProduct"
     :model="model"
     :manufacturers="manufacturers"
     :isEditing="true"
@@ -30,7 +30,7 @@ export default {
     },
   },
   methods: {
-    updateProdcut(model) {
+    updateProduct(model) {
       console.log('model', model);
       this.$store.dispatch('updateProduct', model);
     },
